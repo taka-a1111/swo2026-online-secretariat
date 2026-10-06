@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!-- BUILD_TAG: swo2026_online_secretariat_ver1.10 / 2026-10-01 -->
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="build-tag" content="swo2026_online_secretariat_ver1.10 / 2026-10-01">
+<title>大会・国際会議 事務局の仕事をオンラインで担当します | Science Web株式会社 SWO</title>
+<meta name="description" content="大会・国際会議の事務局業務をオンラインでトータル支援。日程調整、ウェブ更新、請求・記帳補助、参加者管理など背景を理解したコミュニケーションでサポートします。">
+<link rel="canonical" href="https://science-web.online/online-secretariat/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="大会・国際会議 事務局の仕事をオンラインで担当します | Science Web株式会社 SWO">
+<meta property="og:description" content="大会・国際会議の事務局業務をオンラインでトータル支援。日程調整、ウェブ更新、請求・記帳補助、参加者管理など背景を理解したコミュニケーションでサポートします。">
+<meta property="og:url" content="https://science-web.online/online-secretariat/">
+<meta property="og:locale" content="ja_JP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b4a98;
+  --navy-deep:#082f74;
+  --blue:#2c7fc3;
+  --lavender:#dfe3ff;
+  --lavender-line:#cfd5fb;
+  --red:#d00000;
+  --faq-red:#f4382d;
+  --orange:#fd9256;
+  --orange-soft:#ffb185;
+  --orange-line:#ffaa7a;
+  --cream:#fff1e8;
+  --text:#222;
+  --text-mid:#333;
+  --white:#fff;
+  /* デザイン基準幅1414pxを、中身は最大1100px・ヒーローは最大1320pxの幅に縮めて表示する単位 */
+  --u:min(1vw,11px);
+  --uh:min(1vw,13.2px);
+  --font:"Noto Sans JP","游ゴシック体","Yu Gothic","游ゴシック","YuGothic","メイリオ",Meiryo,"Hiragino Kaku Gothic ProN",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);color:var(--text);background:#fff;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 calc(2.6*var(--u))}
+section[id]{scroll-margin-top:16px}
+
+/* ===== ヒーロー（デザイン基準 幅1414px・高さ585px） =====
+   高さは画面幅に比例し、最大455px（中身の基準幅1100pxに合わせた高さ）で止める。
+   写真・見出しはすべて高さ（--hh）を基準に、デザイン画像と同じ比率で配置する */
+.hero{position:relative;overflow:hidden;background:#0b2545;--hh:min(41.372vw,455px)}
+.hero-frame{position:relative;z-index:1;margin:0 auto;overflow:hidden;background:#054698;height:var(--hh)}
+/* 画面幅が広いときは、公開中ページと同じく最大1320pxで中央に置き、左右は公開中ページと同じ紺色 */
+@media (min-width:1400px){.hero-frame{max-width:1320px}}
+.hero-img{position:absolute;top:calc(var(--hh)*-.0991);left:calc(var(--hh)*-.0684);display:block;width:calc(var(--hh)*3.2103);max-width:none;height:auto}
+.hero-inner{position:absolute;inset:0;display:flex;align-items:center;padding:0 0 calc(var(--hh)*.0239) calc(var(--hh)*.0991)}
+.hero h1{color:#fff;font-weight:900;font-size:max(22px,calc(var(--hh)*.1269));line-height:1.93;letter-spacing:.01em;text-shadow:.04em .12em .08em rgba(0,8,30,1)}
+.hero h1 span{display:block}
+
+/* ===== 見出しバー ===== */
+.sec-title{position:relative;width:calc(86*var(--u));max-width:1380px;margin:calc(3.9*var(--u)) auto calc(2.6*var(--u));padding:calc(.3*var(--u)) 0 calc(.3*var(--u)) calc(1.9*var(--u));background:linear-gradient(90deg,#7fa4d6 0%,#a9d0ec 50%,#c1f3f6 100%)}
+.sec-title::after{content:"";position:absolute;left:0;right:0;bottom:calc(-.35*var(--u));height:max(4px,calc(.35*var(--u)));background:linear-gradient(90deg,#0b4a98 0%,#2c7fc3 45%,#7fe6ef 100%)}
+.sec-title h2{font-size:clamp(24px,calc(3.8*var(--u)),60px);font-weight:900;color:#111;letter-spacing:.04em;line-height:1.2}
+
+/* ===== オンライン事務局とは ===== */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:min(calc(4.5*var(--u)),64px);margin-top:calc(-1.2*var(--u))}
+.col-title{text-align:center;font-size:clamp(18px,calc(2.3*var(--u)),34px);font-weight:900;letter-spacing:.02em;margin-bottom:calc(.8*var(--u))}
+.col-title.is-blue{color:var(--navy)}
+.col-title.is-red{color:var(--red)}
+.col-box{border-radius:calc(2*var(--u));padding:0 calc(1.85*var(--u));background:#fff}
+.col-box.is-blue{border:max(3px,calc(.42*var(--u))) solid var(--lavender)}
+.col-box.is-red{border:max(3px,calc(.42*var(--u))) solid var(--orange-line)}
+.item{position:relative;display:flex;align-items:center;gap:calc(2*var(--u));padding:calc(2.55*var(--u)) 0 calc(2.95*var(--u))}
+.item::after{content:"";position:absolute;left:0;right:0;bottom:0;height:max(6px,calc(.7*var(--u)));border-radius:99px;background:var(--lavender)}
+.col-box.is-red .item::after{background:var(--orange-line)}
+.item:last-child::after{display:none}
+.item:last-child{padding-bottom:calc(1.6*var(--u))}
+.item img{width:clamp(56px,calc(6.65*var(--u)),106px);height:auto;flex:0 0 clamp(56px,calc(6.65*var(--u)),106px);border-radius:12px}
+.item-head{font-size:clamp(16px,calc(2.12*var(--u)),32px);font-weight:700;line-height:1.4;letter-spacing:.01em}
+.col-box.is-blue .item-head{color:var(--navy)}
+.item-head.is-long{letter-spacing:0}
+@media (max-width:1100px){.item-head.is-long{letter-spacing:-.04em}}
+@media (min-width:769px){.item-head.is-long{white-space:nowrap}}
+.col-box.is-red .item-head{color:var(--red)}
+.item-sub{font-size:clamp(14px,calc(1.8*var(--u)),28px);color:var(--text-mid);margin-top:calc(.4*var(--u));letter-spacing:.03em}
+.catch{display:flex;align-items:center;justify-content:center;gap:calc(.8*var(--u));margin:calc(.25*var(--u)) 0 calc(1.4*var(--u));font-size:clamp(16px,calc(2.15*var(--u)),34px);font-weight:700;color:#111;text-align:left}
+@media (min-width:769px){.catch{white-space:nowrap}}
+.catch img{width:clamp(36px,calc(4.4*var(--u)),70px);flex:0 0 clamp(36px,calc(4.4*var(--u)),70px)}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:min(calc(4.5*var(--u)),64px);margin:0 0 calc(3.9*var(--u))}
+.btn{justify-self:center;width:89.5%;display:flex;align-items:center;justify-content:flex-start;gap:calc(2.4*var(--u));padding:calc(1.3*var(--u)) calc(1.6*var(--u));border-radius:calc(1.2*var(--u));text-decoration:none;font-size:clamp(17px,calc(2.7*var(--u)),42px);font-weight:900;color:var(--navy);white-space:nowrap;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(11,74,152,.18)}
+.btn-price{background:var(--lavender);border:max(3px,calc(.25*var(--u))) solid #b9c2f5}
+.btn-faq{background:var(--orange-soft);border:max(3px,calc(.25*var(--u))) solid var(--orange)}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:clamp(42px,calc(4.4*var(--u)),70px);height:clamp(42px,calc(4.4*var(--u)),70px);flex:0 0 clamp(42px,calc(4.4*var(--u)),70px);border-radius:50%;color:#fff;font-size:clamp(20px,calc(2.5*var(--u)),40px);font-weight:900}
+.btn-price .badge{background:var(--navy)}
+.btn-faq .badge{background:var(--red)}
+.btn .arrow{margin-left:calc(.35em - calc(2.4*var(--u)))}
+
+/* ===== 料金 ===== */
+.lead{font-size:clamp(18px,calc(2.4*var(--u)),38px);margin:0 0 calc(1.6*var(--u)) calc(1.3*var(--u));color:#111;letter-spacing:.03em}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(2*var(--u))}
+.plan{background:var(--lavender);border-radius:calc(2*var(--u));padding:calc(1.4*var(--u)) calc(1*var(--u)) calc(1.5*var(--u));text-align:center;color:var(--navy)}
+.plan-name{font-size:clamp(17px,calc(1.9*var(--u)),30px);font-weight:900;letter-spacing:.06em}
+.plan-price{margin:calc(.9*var(--u)) 0 calc(1.1*var(--u));font-weight:900;line-height:1.1;white-space:nowrap}
+.plan-price .num{font-size:clamp(28px,calc(4.2*var(--u)),66px);letter-spacing:.01em}
+.plan-price .unit{font-size:clamp(12px,calc(1.7*var(--u)),27px);font-weight:700;margin-left:2px}
+.plan ul{display:inline-block;text-align:left;font-size:clamp(14px,calc(1.55*var(--u)),24px);font-weight:700;color:#111;line-height:1.4}
+.sub-title{font-size:clamp(18px,calc(2.4*var(--u)),38px);font-weight:500;color:#111;margin:calc(4.4*var(--u)) 0 calc(1.1*var(--u)) calc(1.3*var(--u));letter-spacing:.06em}
+.conds{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(2*var(--u));margin:0}
+.cond{background:var(--cream);border-radius:calc(2*var(--u));padding:calc(1.45*var(--u)) calc(1*var(--u));text-align:center}
+.cond-label{color:var(--red);font-weight:700;font-size:clamp(16px,calc(1.85*var(--u)),29px)}
+.cond-value{margin:calc(.7*var(--u)) 0 0;font-size:clamp(15px,calc(1.6*var(--u)),25px);font-weight:500;color:#111}
+.notes{border:max(3px,calc(.3*var(--u))) solid var(--lavender);border-radius:10px;padding:calc(.85*var(--u)) calc(2.4*var(--u)) calc(1.3*var(--u)) calc(9.6*var(--u))}
+.notes li{position:relative;font-size:clamp(15px,calc(1.75*var(--u)),27px);line-height:1.42;padding:calc(.6*var(--u)) 0;color:#111}
+.notes li::before{content:"・";position:absolute;left:calc(-2.9*var(--u));top:calc(.6*var(--u));font-weight:700}
+.proposal{text-align:center;font-size:clamp(18px,calc(2.55*var(--u)),40px);font-weight:900;color:#111;letter-spacing:.06em;margin:calc(1.55*var(--u)) 0 calc(3.9*var(--u))}
+
+/* ===== FAQ ===== */
+.faq{position:relative;padding:calc(1.6*var(--u)) 0 calc(1.75*var(--u));background:#aed8f0 url('{{IMG:faq_bk}}') center -19.4vw/100.7% auto no-repeat}
+.faq-title{text-align:center;color:var(--navy);font-weight:900;font-size:clamp(26px,calc(3.85*var(--u)),62px);letter-spacing:.06em;margin-bottom:calc(.85*var(--u));line-height:1.3}
+.faq-title .en{margin-left:1.1em;letter-spacing:.24em}
+.faq-list{width:96%;margin:0 auto;display:grid;gap:calc(1.86*var(--u))}
+.qa{margin:0;background:#f6f7f7;border-radius:calc(1.4*var(--u));padding:calc(1*var(--u)) calc(2*var(--u)) calc(1*var(--u)) calc(1.5*var(--u));box-shadow:calc(.4*var(--u)) calc(.5*var(--u)) calc(.6*var(--u)) rgba(80,110,140,.45)}
+.qa dt,.qa dd{display:flex;gap:calc(1.6*var(--u));margin:0}
+.qa dt{color:var(--navy);font-weight:700;font-size:clamp(15px,calc(1.55*var(--u)),25px);letter-spacing:.04em}
+.qa dd{margin-top:calc(.5*var(--u));color:var(--faq-red);font-weight:700;font-size:clamp(15px,calc(1.55*var(--u)),25px);letter-spacing:.04em}
+.qa .mark{flex:0 0 1em;font-weight:900}
+.qa dt .mark{color:var(--navy)}
+.qa dd .mark{color:var(--faq-red)}
+.qa .sub{display:block;margin:calc(.3*var(--u)) 0 0 .3em;color:#222;font-weight:400;font-size:clamp(14px,calc(1.45*var(--u)),23px);line-height:1.45;letter-spacing:.04em}
+.qa .sub.note{padding-left:calc(7.5*var(--u));margin-top:0}
+
+/* ===== 締めのバナー ===== */
+/* デザイン画像の比率：高さ248px・写真は幅804pxで左-20px・上-88pxに配置（基準幅1414px） */
+.closing{position:relative;overflow:hidden;background:#fbfcfd}
+.closing-inner{position:relative;max-width:1100px;margin:0 auto;min-height:calc(17.54*var(--u))}
+.closing-inner img{position:absolute;left:calc(-1.41*var(--u));top:calc(-6.22*var(--u));width:calc(56.9*var(--u));max-width:none;height:auto;z-index:0}
+.closing-inner>div{position:relative;z-index:1;margin-left:calc(42.55*var(--u));padding-top:calc(1.2*var(--u))}
+.closing h3{color:var(--navy);font-size:clamp(17px,calc(1.9*var(--u)),30px);font-weight:900;line-height:1.5;letter-spacing:.03em}
+.closing .pride{color:var(--navy);font-weight:700;font-size:clamp(15px,calc(1.7*var(--u)),27px);line-height:1.33;margin:0 0 0 calc(6.9*var(--u));letter-spacing:.01em}
+.closing .contact-lead{color:var(--navy);font-weight:700;font-size:clamp(15px,calc(1.68*var(--u)),27px);line-height:1.43;margin-top:calc(2.4*var(--u));letter-spacing:.02em}
+
+/* ===== フッター ===== */
+.footer{color:#fff;background:#0d3266 url('{{IMG:footer_bk}}') center/cover no-repeat}
+.footer-inner{position:relative;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:51% 1fr;align-items:center;padding:calc(1.9*var(--u)) calc(2.6*var(--u)) calc(1.9*var(--u)) calc(4*var(--u))}
+.footer-inner::before{content:"";position:absolute;top:8%;bottom:8%;left:51%;width:max(10px,calc(1*var(--u)));transform:translateX(-50%);background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,255,255,.95) 0%,rgba(190,230,255,.6) 25%,rgba(150,210,255,0) 100%);filter:blur(1px);pointer-events:none}
+.footer-left .f1,.footer-left .f2{font-weight:700;font-size:clamp(18px,calc(2.1*var(--u)),34px);line-height:1.5;letter-spacing:.02em}
+.footer-left .f2{margin-top:calc(.95*var(--u))}
+.footer-left .f3{margin-top:calc(1.1*var(--u));font-size:clamp(15px,calc(1.7*var(--u)),27px);letter-spacing:.06em}
+.contacts{padding-left:calc(2.85*var(--u))}
+.contacts li{display:flex;gap:calc(2.5*var(--u));align-items:center}
+.contacts li+li{margin-top:calc(.45*var(--u))}
+.contacts svg{width:clamp(38px,calc(4.1*var(--u)),64px);height:clamp(38px,calc(4.1*var(--u)),64px);flex:0 0 clamp(38px,calc(4.1*var(--u)),64px);stroke:#fff}
+.c-label{display:block;font-weight:700;font-size:clamp(16px,calc(2*var(--u)),32px);line-height:1.25}
+.c-text{display:block;font-family:"M PLUS 1 Code","Noto Sans JP","游ゴシック体","Yu Gothic","メイリオ",Meiryo,monospace;font-size:clamp(13px,calc(1.5*var(--u)),24px);line-height:1.45;word-break:break-all}
+.c-text a{color:#fff;text-decoration:none}
+.c-text a.u{text-decoration:underline}
+.c-name{margin-left:1.6em;font-family:var(--font)}
+.band-swo{margin-left:1.5em}
+.c-text.u{text-decoration:underline}
+.footer-band{margin:0;text-align:center;font-family:"M PLUS 1 Code","Noto Sans JP","游ゴシック体","Yu Gothic","メイリオ",Meiryo,monospace;padding:calc(2.2*var(--u)) 20px calc(2.6*var(--u));font-size:clamp(16px,calc(2.18*var(--u)),35px);letter-spacing:.06em}
+
+/* ===== レスポンシブ ===== */
+@media (max-width:768px){.br-pc{display:none}}/* タブレット幅：最小フォントで折り返さないよう、デザイン比率のまま縮小 */
+@media (min-width:769px) and (max-width:1099px){.catch{font-size:calc(1.88*var(--u))}.closing h3{font-size:calc(1.9*var(--u))}.closing .pride{font-size:calc(1.7*var(--u))}.closing .contact-lead{font-size:calc(1.68*var(--u))}}
+@media (max-width:1100px) and (min-width:769px){
+  .btn{width:96%;gap:calc(1.8*var(--u));padding:calc(1.3*var(--u)) calc(1.4*var(--u))}
+  .btn .arrow{margin-left:calc(.35em - calc(1.8*var(--u)))}
+}
+@media (max-width:900px){
+  .plans,.conds{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .wrap{padding:0 16px}
+  .hero-frame{height:auto}
+  .hero-img{position:static;margin:0;left:auto;top:auto;width:100%;height:220px;object-fit:cover;object-position:72% center}
+  .hero-inner{position:static;display:block;background:linear-gradient(125deg,#054698 0%,#0a5fbf 55%,#098ed9 100%);padding:24px 20px 26px}
+  .hero h1{font-size:clamp(24px,calc(7*var(--u)),34px);line-height:1.65}
+  .sec-title{width:100%;margin:40px 0 24px;padding:4px 0 4px 14px}
+  .sec-title::after{bottom:-4px}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .col-title{margin-bottom:10px}
+  .col-box{border-radius:18px;padding:6px 18px}
+  .item{gap:16px;padding:14px 0 18px}
+  .cta{grid-template-columns:1fr;gap:14px;margin-bottom:40px}
+  .btn{width:100%;padding:12px 16px;border-radius:12px;gap:16px}
+  .btn .arrow{margin-left:auto}
+  .catch{align-items:flex-start;margin:20px 0}
+  .plan,.cond{border-radius:16px;padding:16px 8px}
+  .notes{padding:14px 16px 14px 36px}
+  .notes li::before{left:-22px}
+  .qa{border-radius:14px;padding:14px 16px;box-shadow:3px 4px 6px rgba(80,110,140,.4)}
+  .qa .sub.note{padding-left:0}
+  .faq{padding:28px 0 32px;background-position:center top;background-size:cover}
+  .faq-list{width:100%;gap:14px}
+  .closing-inner{min-height:0;padding:16px}
+  .closing-inner img{position:static;width:100%}
+  .closing-inner>div{margin-left:0;padding-top:8px}
+  .closing .pride{margin-left:0}
+  .footer-inner{grid-template-columns:1fr;gap:24px;padding:28px 20px}
+  .footer-inner::before{display:none}
+  .contacts{padding-left:0}
+  .footer-band{padding:18px 16px}
+}
+@media (max-width:480px){
+  .plans,.conds{grid-template-columns:1fr 1fr;gap:12px}
+  .plan{padding:16px 6px}
+  .plan-price .num{font-size:27px}
+  .plan-price .unit{font-size:12px}
+  .proposal{font-size:18px}
+  .col-box{padding:8px 16px}
+  .item{gap:16px}
+  .item img{width:60px;height:60px;flex-basis:60px}
+  .btn{gap:14px;padding:14px 16px}
+  .badge{width:44px;height:44px;flex-basis:44px;font-size:22px}
+}
+@media print{
+  html{scroll-behavior:auto}
+  .btn:hover{transform:none;box-shadow:none}
+  .qa{box-shadow:none;border:1px solid #ccd}
+  .qa,.plan,.cond,.item,.sec-title,.closing-inner{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+<script type="application/ld+json">
+{{JSONLD}}
+</script>
+</head>
+<body>
+
+<main>
+<!-- ===== ヒーロー ===== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-frame">
+  <img class="hero-img" src="{{IMG:hero}}" alt="ノートパソコンや卓上カレンダーが置かれた机" width="2400" height="824">
+  <div class="hero-inner">
+    <h1 id="hero-title"><span>大会・国際会議、</span><span>事務局の仕事を</span><span>オンラインで担当します</span></h1>
+  </div>
+  </div>
+</section>
+
+<!-- ===== オンライン事務局とは ===== -->
+<section id="about" class="wrap" aria-labelledby="about-title">
+  <div class="sec-title"><h2 id="about-title">オンライン事務局とは</h2></div>
+
+  <div class="about-grid">
+    <div>
+      <h3 class="col-title is-blue">オンライン事務局です</h3>
+      <ul class="col-box is-blue">
+        <li class="item"><img src="{{IMG:cal_w}}" alt="" width="72" height="72"><div><p class="item-head">日程調整&ensp;/&ensp;資料作成</p><p class="item-sub">主催者・運営委員会・組織委員会</p></div></li>
+        <li class="item"><img src="{{IMG:world_w}}" alt="" width="72" height="72"><div><p class="item-head">ウェブ更新&ensp;/&ensp;修正・削除</p><p class="item-sub">主催者・運営委員会・制作先</p></div></li>
+        <li class="item"><img src="{{IMG:invoice_w}}" alt="" width="72" height="72"><div><p class="item-head is-long">請求書発行／経費精算／記帳補助</p><p class="item-sub">参加登録者・運営委員会</p></div></li>
+        <li class="item"><img src="{{IMG:pay_w}}" alt="" width="72" height="72"><div><p class="item-head">入金管理&ensp;/&ensp;支払管理</p><p class="item-sub">運営委員会・組織委員会から外注先</p></div></li>
+        <li class="item"><img src="{{IMG:hotel_w}}" alt="" width="72" height="72"><div><p class="item-head">新幹線・ホテルの予約</p><p class="item-sub">招へい講演者</p></div></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="col-title is-red">主催者・大会運営委員会が得られること</h3>
+      <ul class="col-box is-red">
+        <li class="item"><img src="{{IMG:crew}}" alt="" width="72" height="72"><div><p class="item-head">採用不要</p><p class="item-sub">短期間アルバイトを募集しない</p></div></li>
+        <li class="item"><img src="{{IMG:staff}}" alt="" width="72" height="72"><div><p class="item-head">属人化の解消</p><p class="item-sub">教授・学生や秘書に依存しない</p></div></li>
+        <li class="item"><img src="{{IMG:manual}}" alt="" width="72" height="72"><div><p class="item-head">手作業の削減</p><p class="item-sub">ムダな作業を減らし、効率的に</p></div></li>
+        <li class="item"><img src="{{IMG:clock}}" alt="" width="72" height="72"><div><p class="item-head">予定どおり</p><p class="item-sub">募集期限や受付期限を予定どおり</p></div></li>
+        <li class="item"><img src="{{IMG:ai}}" alt="" width="72" height="72"><div><p class="item-head">AI活用が進む</p><p class="item-sub">自動化・効率化を加速化する</p></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="catch"><img src="{{IMG:heart}}" alt="" width="46" height="38"><span>「作業代行」だけではなく、背景を理解したコミュニケーションで大会事務局を支援します。</span></p>
+
+  <div class="cta">
+    <a class="btn btn-price" href="#price"><span class="badge" aria-hidden="true">¥</span><span>料金をご案内します</span><span class="arrow" aria-hidden="true">＞</span></a>
+    <a class="btn btn-faq" href="#faq"><span class="badge" aria-hidden="true">?</span><span>F.A.Q.をご説明します</span><span class="arrow" aria-hidden="true">＞</span></a>
+  </div>
+</section>
+
+<!-- ===== 料金・サービス内容 ===== -->
+<section id="price" class="wrap" aria-labelledby="price-title">
+  <div class="sec-title"><h2 id="price-title">料金・サービス内容</h2></div>
+
+  <p class="lead">基本料金は、実働時間 20時間／月です。</p>
+  <div class="plans">
+    <div class="plan"><h3 class="plan-name">３ヶ月プラン</h3><p class="plan-price"><span class="num">40,000</span><span class="unit">円／月</span></p><ul><li>・メール送受信</li><li>・Zoomヒアリング</li></ul></div>
+    <div class="plan"><h3 class="plan-name">６ヶ月プラン</h3><p class="plan-price"><span class="num">38,000</span><span class="unit">円／月</span></p><ul><li>・メール送受信</li><li>・Zoomヒアリング</li></ul></div>
+    <div class="plan"><h3 class="plan-name">年間プラン</h3><p class="plan-price"><span class="num">35,000</span><span class="unit">円／月</span></p><ul><li>・メール送受信</li><li>・Zoomヒアリング</li></ul></div>
+    <div class="plan"><h3 class="plan-name">追加プラン</h3><p class="plan-price"><span class="num">43,000</span><span class="unit">円／月</span></p><ul><li>・メール送受信</li><li>・Zoomヒアリング</li></ul></div>
+  </div>
+
+  <h3 class="sub-title">基本サービス・対応条件</h3>
+  <dl class="conds">
+    <div class="cond"><dt class="cond-label">実働時間</dt><dd class="cond-value">20時間／月</dd></div>
+    <div class="cond"><dt class="cond-label">対応時間</dt><dd class="cond-value">平日10時〜17時</dd></div>
+    <div class="cond"><dt class="cond-label">Zoom</dt><dd class="cond-value">月〜金／10時〜15時</dd></div>
+    <div class="cond"><dt class="cond-label">連絡方法</dt><dd class="cond-value">メール／Zoom</dd></div>
+  </dl>
+
+  <h3 class="sub-title">追加・運用について</h3>
+  <ul class="notes">
+    <li>社内・広報SNS・ビジネスチャットへの対応も、ご要望に応じてご相談ください。</li>
+    <li>作業時間が余った場合は、無料で次月まで繰り越し可能です。<br>※契約終了月は翌月への繰り越し不可。</li>
+    <li>当初想定した作業以外も、契約時間内であれば対応可能か検討します。<br>時間不足の場合は追加契約となります。</li>
+    <li>作業マニュアルは不要です。作業内容の整理や手順の作成から支援します。</li>
+  </ul>
+
+  <p class="proposal">大会にあわせた業務プランをご提案します。</p>
+</section>
+
+<!-- ===== よくあるご質問 ===== -->
+<section id="faq" class="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title" class="faq-title">よくあるご質問<span class="en">F.A.Q.</span></h2>
+    <div class="faq-list">
+{{FAQ}}
+    </div>
+  </div>
+</section>
+
+<!-- ===== 締めのバナー ===== -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="closing-inner">
+    <img src="{{IMG:laptop}}" alt="ノートパソコンとメール・カレンダーなどのアイコン" width="1208" height="576">
+    <div>
+      <h3 id="closing-title">シンプルな依頼だけで、これらすべてを代行する作業です。</h3>
+      <p class="pride">生成AIと異なるのは、背景を理解したコミュニケーションが<br class="br-pc">できることが自慢です。</p>
+      <p class="contact-lead">ご不明点やご質問、導入をお悩みの方は、お気軽にお問い合せください。<br>大会にあわせた業務プランをご提案します。</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== フッター ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p class="f1">大会・国際会議</p>
+      <p class="f2">事務局の仕事をオンラインで担当します</p>
+      <p class="f3">ＳＷＯは、大会事務局をアシストします。</p>
+    </div>
+    <ul class="contacts">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><defs><mask id="globe-m"><circle cx="12" cy="12" r="11" fill="#fff"/><g fill="none" stroke="#000" stroke-width="1.5"><path d="M12 0v24M0 8.2h24M0 15.8h24"/><ellipse cx="12" cy="12" rx="5.6" ry="11.6"/></g></mask></defs><rect width="24" height="24" fill="#fff" stroke="none" mask="url(#globe-m)"/></svg>
+        <div><span class="c-label">Webサイト</span><span class="c-text"><a href="https://science-web.online/online-secretariat/">https://science-web.online/online-secretariat/</a></span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="1"/><path d="M3 5.5l9 7.5 9-7.5M3 18.5l7-6.5M21 18.5l-7-6.5"/></svg>
+        <div><span class="c-label">お問い合わせ</span><span class="c-text"><a class="u" href="mailto:secretariat@science-web.online">secretariat@science-web.online</a><span class="c-name">佐藤加奈</span></span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2.5"/><path d="M16 10.5l6-3.5v10l-6-3.5z"/></svg>
+        <div><span class="c-label">Zoomヒアリング</span><span class="c-text u">月曜〜金曜／10時〜15時</span></div>
+      </li>
+    </ul>
+  </div>
+  <p class="footer-band">Science Web株式会社<span class="band-swo">ＳＷＯ</span></p>
+</footer>
+
+</body>
+</html>
